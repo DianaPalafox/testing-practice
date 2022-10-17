@@ -1,26 +1,26 @@
 
 
-export default function encryption(string, key){
+export default function turnToNum(string, key){
     let arr = []
     let text = string.toUpperCase(); 
     for(let i=0; i< text.length; i++){
         let result = (text.charCodeAt(i) - 65); 
         arr.push(result); 
     }
-    caesarCipher(arr, key);  
+    return cipher(arr, key);  
 }
 
-function caesarCipher(arr, key){
+function cipher(arr, key){
     let array = []
     for(let i=0; i<arr.length; i++){
         let cipher = (Number(arr[i]) + key); 
         array.push(cipher);
 
     }
-    decryption(array); 
+    return encryption(array); 
 }
 
-function decryption(array){
+function encryption(array){
     let finalArr = [];
     for(let i=0; i<array.length; i++){
         let result = (Number(array[i]) + 65); 
@@ -32,5 +32,4 @@ function decryption(array){
     
 }
 
-
-console.log(encryption('attack at dawn', 1))
+//console.log(turnToNum('attack', 1))

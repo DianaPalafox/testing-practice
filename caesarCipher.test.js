@@ -1,6 +1,6 @@
-import encryption from './caesarCipher.js'
+import turnToNum from './caesarCipher.js'
 
 
 test('caesar cipher', () => {
-    expect(encryption('attack', 1)).toBe('buubdl')
-})
+    expect(turnToNum('attack', 1)).toBe('buubdl')
+});
